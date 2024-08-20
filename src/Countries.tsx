@@ -16,9 +16,15 @@ export default function Countries(props: {searchText: string}) {
         .then(data => setData(data))
     }
   }, [props.searchText])
+
+  const countryElementArray = [];
+  for (let i = 0; i < data.length; i++) {
+    countryElementArray.push(<CountryElement data={data[i]} key={i}/>);
+  }
+
   return(
     <>
-      {props.searchText !== "" && data[0] !== undefined ? <CountryElement data={data[0]}/> : <></> }
+      {props.searchText !== "" && data[0] !== undefined ? countryElementArray : <></> }
     </>
   )
 }
