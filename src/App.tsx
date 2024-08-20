@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>Countries Website</h1>
-      <SearchBar setSearchText={setSearchText}/>
+      <SearchBar searchText={searchText} setSearchText={setSearchText}/>
       <Countries searchText={searchText}/>
     </>
   )
