@@ -23,8 +23,8 @@ export default function Countries(props: {searchText: string}) {
   }
 
   return(
-    <>
+    <div className={styles.group}>
       {props.searchText !== "" && data[0] !== undefined ? countryElementArray : <></> }
-    </>
+    </div>
   )
 }

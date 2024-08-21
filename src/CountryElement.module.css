@@ -1,0 +1,19 @@
+.card {
+    width: 20vw;
+    height: 50vh;
+    margin-bottom: 10px;
+}
+
+.cardHover {
+    background-color: gray;
+}
+
+.flag {
+    max-height: 50%;
+    max-width: 100%;
+}
+
+.dataDiv {
+    display: flex;
+    justify-content: space-around;
+}
