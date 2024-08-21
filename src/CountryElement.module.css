@@ -5,7 +5,12 @@
 }
 
 .cardHover {
-    background-color: gray;
+    transform: scale3d(130%, 130%, 1);
+    background-color: grey;
+}
+
+.divNotHover {
+    visibility: hidden;
 }
 
 .flag {

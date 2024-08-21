@@ -15,18 +15,16 @@ export default function CountryElement(props: { data: data }) {
 
   return(
     <div className={`${styles.card} ${hover ? styles.cardHover : null}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      {hover ?
-        <div className={styles.titleDiv}>
-          <p>{Object.values(props.data.name)[0]}</p>
-          <p>{props.data.capital ? props.data.capital : ""}</p>
-        </div> : null}
+      <div className={`${styles.titleDiv} ${hover ? null: styles.divNotHover}`}>
+        <p>{Object.values(props.data.name)[0]}</p>
+        <p>{props.data.capital ? props.data.capital : ""}</p>
+      </div>
       <img className={styles.flag} src={props.data.flags.svg} alt={props.data.flags.alt} />
-      {hover ?
-        <div className={styles.dataDiv}>
-          <p>{props.data.population}</p>
-          <p>{props.data.region}</p>
-          <p>{props.data.area}</p>
-        </div> : null}
+      <div className={`${styles.dataDiv} ${hover ? null : styles.divNotHover}`}>
+        <p>{props.data.population}</p>
+        <p>{props.data.region}</p>
+        <p>{props.data.area}</p>
+      </div>
     </div>
   )
 }
