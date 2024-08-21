@@ -1,6 +1,6 @@
 .group {
     display: grid;
     justify-items: center;
-    width: auto;
+    width: 80vw;
     grid-template-columns: repeat(4, 1fr);
 }
